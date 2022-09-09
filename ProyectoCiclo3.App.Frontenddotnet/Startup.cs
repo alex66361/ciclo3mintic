@@ -8,9 +8,13 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+// Se añade la direccion de repositorios para que se ejecute
+using ProyectoCiclo3.App.Persistencia.AppRepositorios;
+
 
 namespace ProyectoCiclo3.App.Frontenddotnet
-{
+{ 
+    //Cuando ejecuto la pagina web esto es lo que corre
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -24,6 +28,11 @@ namespace ProyectoCiclo3.App.Frontenddotnet
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            //Se agrega cada repositorio que se vaya agregado a la pagina 
+            services.AddSingleton<RepositorioBuses, RepositorioBuses>();
+            services.AddSingleton<RepositorioEstaciones, RepositorioEstaciones>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

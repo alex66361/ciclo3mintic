@@ -1,42 +1,38 @@
 @page
-@{
+@model ProyectoCiclo3.App.Frontend.Pages.ListEstacionesModel
+@{ //Es para la interfaz 
 }
- 
+
 <table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Direccion</th>
-      <th scope="col">Coordenada X</th>
-      <th scope="col">Coordenada Y</th>
-      <th scope="col">Tipo</th>
+      <th scope="col">nombre</th>
+      <th scope="col">direccion</th>
+      <th scope="col">coordenada X</th>
+      <th scope="col">coordenada Y</th>
+      <th scope="col">tipo</th>
+      <th scope="col">acciones</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Centro</td>
-      <td>Cra 27</td>
-      <td>7.145</td>
-      <td>70.145</td>
-      <td>Principal</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Estadio</td>
-      <td>Cra 270</td>
-      <td>71.145</td>
-      <td>10.145</td>
-      <td>Principal</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Terminal</td>
-      <td>Calle 2</td>
-      <td>6.145</td>
-      <td>10.145</td>
-      <td>Segundaria</td>
-    </tr>
+    @foreach (var estaciones in Model.Estaciones)
+    {
+      //<tr> crea una nueva fila 
+        <tr>
+            <td>@estaciones.id</td>
+            <td>@estaciones.nombre</td>
+            <td>@estaciones.direccion</td>
+            <td>@estaciones.coord_x</td>
+            <td>@estaciones.coord_y</td>
+            <td>@estaciones.tipo</td>
+            <td>
+              <a class="btn btn-info" asp-page="./Details" asp-route-estacionId="@estaciones.id"><i class="fas fa-adjust"></i>Ver</a>
+              <a class="btn btn-info" asp-page="./Edit" asp-route-estacionId="@estaciones.id">Editar</a>
+              <a class="btn btn-danger" href="">Eliminar</a>
+              </td>
+        </tr>
+    }
+
   </tbody>
 </table>
