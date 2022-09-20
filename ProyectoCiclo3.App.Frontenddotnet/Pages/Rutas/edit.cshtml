@@ -1,0 +1,25 @@
+@page 
+@model ProyectoCiclo3.App.Frontend.Pages.EditRutasModel
+@{
+    var ruta = Model.Ruta;
+    //@page indica que es una pagina 
+    //asp-for es una propiedad especifica de razor .net
+    /*
+    d-none se usa para oculatar la casilla y readonly es para que no se puedea editar
+    */
+}
+ 
+<div class="text-center">
+<form method="POST">
+        <label for="id" class="form-label">id</label>
+        <input type="number" class="form-control d-none" id="id" name="id" required placeholder="id" asp-for="@ruta.id" readonly >
+        <label for="origen" class="form-label">Origen:</label>
+        <input type="text" class="form-control" id="origen" name="origen" required placeholder="Origen" asp-for="@ruta.origen">
+        <label for="destino" class="form-label">Destino:</label>
+        <input type="text" class="form-control" id="destino" name="destino" required placeholder="Destino" asp-for="@ruta.destino">
+        <label for="tiempo_estimado" class="form-label">Tiempo_estimado:</label>
+        <input type="number" class="form-control" id="tiempo_estimado" name="tiempo_estimado" required placeholder="Tiempo_estimado" asp-for="@ruta.tiempo_estimado">
+        <label for="tipo">Tipo:</label>
+  <button type="submit" class="btn btn-success">Actualizar</button>
+</form>
+</div>

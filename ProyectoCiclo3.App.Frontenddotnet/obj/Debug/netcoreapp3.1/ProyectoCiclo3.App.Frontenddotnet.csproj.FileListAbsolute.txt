@@ -88,3 +88,6 @@ C:\Users\aleja\OneDrive\Escritorio\ciclo3\ProyectoCiclo3.App\ProyectoCiclo3.App.
 C:\Users\aleja\OneDrive\Escritorio\ciclo3\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontenddotnet\obj\Debug\netcoreapp3.1\Razor\Pages\Estaciones\Details.cshtml.g.cs
 C:\Users\aleja\OneDrive\Escritorio\ciclo3\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontenddotnet\obj\Debug\netcoreapp3.1\Razor\Pages\Buses\Details.cshtml.g.cs
 C:\Users\aleja\OneDrive\Escritorio\ciclo3\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontenddotnet\obj\Debug\netcoreapp3.1\Razor\Pages\Rutas\Details.cshtml.g.cs
+C:\Users\aleja\OneDrive\Escritorio\ciclo3\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontenddotnet\obj\Debug\netcoreapp3.1\Razor\Pages\Buses\edit.cshtml.g.cs
+C:\Users\aleja\OneDrive\Escritorio\ciclo3\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontenddotnet\obj\Debug\netcoreapp3.1\Razor\Pages\Estaciones\edit.cshtml.g.cs
+C:\Users\aleja\OneDrive\Escritorio\ciclo3\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontenddotnet\obj\Debug\netcoreapp3.1\Razor\Pages\Rutas\edit.cshtml.g.cs

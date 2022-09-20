@@ -9,18 +9,22 @@ using ProyectoCiclo3.App.Dominio;
  
 namespace ProyectoCiclo3.App.Frontend.Pages
 {
-    public class FormBusesModel : PageModel
+    public class EditRutasModel : PageModel
     {
-        private readonly RepositorioBuses repositorioBuses;
-        [BindProperty]          //Cuadno guarde una informacion lo guarde en esta variable
-        public Buses Bus {get;set;}
-
-        public FormBusModel(RepositorioBuses repositorioBuses)
+        private readonly RepositorioRutas repositorioRutas;
+        [BindProperty]
+        public Rutas Ruta {get;set;}
+ 
+        public EditRutasModel(RepositorioRutas repositorioRutas)
        {
-            this.repositorioBuses=repositorioBuses;
+            this.repositorioRutas=repositorioRutas;
        }
-        public void OnGet()
-        { 
+ 
+        public IActionResult OnGet(int rutasId)
+        {
+                Ruta=repositorioRutas.GetWithId(rutasId);
+                return Page();
+ 
         }
         public IActionResult OnPost()
         {
@@ -28,7 +32,10 @@ namespace ProyectoCiclo3.App.Frontend.Pages
             {
                 return Page();
             }
-            repositorioBuses.Create(Bus);
+            if(Ruta.id>0)
+            {
+                Ruta = repositorioRutas.Update(Ruta);
+            }
             return RedirectToPage("./List");
         }
 

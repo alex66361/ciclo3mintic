@@ -6,17 +6,17 @@
 <div class="text-center">
     <form method="POST">
         <label for="id" class="form-label">id:</label>
-        <input type="text" class="form-control" id="id" name="id" required placeholder="id">
+        <input type="text" class="form-control" id="id" name="id" required placeholder="id" asp-for="Bus.id">
         <label for="Marca" class="form-label">marca:</label>
-        <input type="text" class="form-control" id="Marca" name="Marca" required placeholder="Marca">
+        <input type="text" class="form-control" id="Marca" name="Marca" required placeholder="Marca" asp-for="Bus.marca">
         <label for="Modelo" class="form-label">modelo</label>
-        <input type="text" class="form-control" id="Modelo" name="Modelo" required placeholder="Modelo">
+        <input type="text" class="form-control" id="Modelo" name="Modelo" required placeholder="Modelo" asp-for="Bus.modelo">
         <label for="Kilometraje" class="form-label">kilometraje:</label>
-        <input type="number" class="form-control" id="Kilometraje" name="Kilometraje" required placeholder="Kilometraje">
+        <input type="number" class="form-control" id="Kilometraje" name="Kilometraje" required placeholder="Kilometraje" asp-for="Bus.kilometraje">
         <label for="Número de asientos" class="form-label">numero_asientos:</label>
-        <input type="number" class="form-control" id="Número de asientos" name="Número de asientos" required placeholder="Número de asientos">
+        <input type="number" class="form-control" id="Número de asientos" name="Número de asientos" required placeholder="Número de asientos" asp-for="Bus.numero_asientos">
         <label for="Placa" class="form-label">placa:</label>
-        <input type="text" class="form-control" id="Placa" name="Placa" required placeholder="Placa">
+        <input type="text" class="form-control" id="Placa" name="Placa" required placeholder="Placa" asp-for="Bus.placa">
         <label for="tipo">Tipo:</label>
         <hr>
         <button type="submit" class="btn btn-success">Enviar</button>
